@@ -34,15 +34,15 @@ function App() {
         error && <p>Couldnt load products</p>
       }
       {!loading && !error && (
-  <div>
+  <pre>
     {data.map((product) => (
-      <pre key={product.id}>
+      <article> key={product.id}>
         <h2>{product.title}</h2>
         <img src={product.thumbnail} alt={product.title} width="150" />
         <p>${product.price}</p>
-      </pre>
+      </article>>
     ))}
-  </div>
+  </pre>
 )}
     </>
   )
